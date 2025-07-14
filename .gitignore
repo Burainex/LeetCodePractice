@@ -1,0 +1,39 @@
+# Build files
+/build/
+/out/
+
+# Gradle files
+.gradle/
+gradle/
+*.iml
+*.jar
+*.class
+
+# IntelliJ / Android Studio specific
+.idea/
+*.ipr
+*.iws
+*.swp
+*.swo
+*.swn
+.DS_Store
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+*.log.*
+*.out
+
+# Test outputs
+/test-results/
+/test_output/
+
+# Auto-generated code
+build/generated/
+**/generated/**/*
