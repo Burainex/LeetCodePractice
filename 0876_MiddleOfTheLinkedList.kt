@@ -1,5 +1,7 @@
 package com.burainex.leetcodesolutions
 
+import com.burainex.leetcodesolutions.utils.ListNode
+
 /*
  * 876. Middle of the Linked List
  * URL: https://leetcode.com/problems/middle-of-the-linked-list/description/
@@ -17,10 +19,6 @@ package com.burainex.leetcodesolutions
  * Output: [4,5,6]
  * Explanation: Since the list has two middle nodes with values 3 and 4, we return the second one.
  */
-
-class ListNode(var `val`: Int) {
-    var next: ListNode? = null
-}
 
 fun middleNode(head: ListNode?): ListNode? {
     var slow = head

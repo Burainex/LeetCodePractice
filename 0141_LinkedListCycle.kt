@@ -1,5 +1,7 @@
 package com.burainex.leetcodesolutions
 
+import com.burainex.leetcodesolutions.utils.ListNode
+
 /*
  * 141. Linked List Cycle
  * URL: https://leetcode.com/problems/linked-list-cycle/description/
@@ -20,10 +22,6 @@ package com.burainex.leetcodesolutions
  * Output: true
  * Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).
  */
-
-class ListNode(var `val`: Int) {
-    var next: ListNode? = null
-}
 
 fun hasCycle(head: ListNode?): Boolean {
     var slow = head
