@@ -1,0 +1,52 @@
+package com.burainex.leetcodesolutions
+
+/*
+ * 747. Largest Number At Least Twice of Others
+ * URL: https://leetcode.com/problems/largest-number-at-least-twice-of-others/description/
+ *
+ * Description:
+ * You are given an integer array nums where the largest integer is unique.
+ * Determine whether the largest element in the array is at least twice as much as every other number in the array.
+ * If it is, return the index of the largest element, or return -1 otherwise.
+ *
+ * Constraints:
+ * 2 <= nums.length <= 50
+ * 0 <= nums[i] <= 100
+ * The largest element in nums is unique.
+ *
+ * Example:
+ * Input: nums = [3,6,1,0]
+ * Output: 1
+ * Explanation: 6 is the largest integer.
+ * For every other number in the array x, 6 is at least twice as big as x.
+ * The index of value 6 is 1, so we return 1.
+ */
+
+fun dominantIndex(nums: IntArray): Int {
+    var largestIndex = 0
+    var largest = -1
+    var secondLargest = -1
+
+    nums.forEachIndexed { index, value ->
+        when {
+            value > largest -> {
+                secondLargest = largest
+                largest = value
+                largestIndex = index
+            }
+
+            value > secondLargest -> {
+                secondLargest = value
+            }
+        }
+    }
+
+    return if (largest >= secondLargest * 2) largestIndex else -1
+}
+
+fun main() {
+    val example = intArrayOf(3, 6, 1, 0)
+    print(
+        dominantIndex(example)
+    )
+}
