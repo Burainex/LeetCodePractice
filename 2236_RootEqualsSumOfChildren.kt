@@ -1,5 +1,7 @@
 package com.burainex.leetcodesolutions
 
+import com.burainex.leetcodesolutions.utils.TreeNode
+
 /*
  * 2236. Root Equals Sum of Children
  * URL: https://leetcode.com/problems/root-equals-sum-of-children/description/
@@ -18,11 +20,6 @@ package com.burainex.leetcodesolutions
  * Explanation: The values of the root, its left child, and its right child are 10, 4, and 6, respectively.
  * 10 is equal to 4 + 6, so we return true.
  */
-
-class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
-}
 
 fun checkTree(root: TreeNode?): Boolean =
     root!!.`val` == root.left!!.`val` + root.right!!.`val`
